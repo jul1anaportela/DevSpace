@@ -11,7 +11,7 @@ Meu primeiro projeto utilizando a tecnologia Flask
 </p>
 
 <p align="center">
-  <img alt="projeto DevLinks" src="./.github/preview.jpg" width="100%">
+  <img alt="projeto Comuna" src="./.github/preview.jpg" width="100%">up
 </p>
 
 ## 🚀 Tecnologias
