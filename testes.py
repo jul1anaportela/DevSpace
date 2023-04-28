@@ -34,6 +34,6 @@ from models import Usuario, Post
 
 
 # ===== deletar o banco de dados e adicionar novamente pois esse foi apenas um teste
-with app.app_context():
-    database.drop_all()
-    database.create_all()
+# with app.app_context():
+#     database.drop_all()
+#     database.create_all()
