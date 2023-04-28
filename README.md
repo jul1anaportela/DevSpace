@@ -1,7 +1,7 @@
 <h1 align="center"> Comuna </h1>
 
 <p align="center">
-🚧 Meu primeiro projeto utilizando a tecnologia Flask e ele ainda está em construção 🚧
+🚧 Meu primeiro projeto utilizando a tecnologia Flask ( em construção )🚧
 </p>
 
 <p align="center">
