@@ -1,7 +1,7 @@
 from flask import Flask, render_template, url_for, request, flash, redirect
-from forms import FormLogin, FormCriarConta
+from comuna.forms import FormLogin, FormCriarConta
 from flask_sqlalchemy import SQLAlchemy
-from models import Usuario, Post
+from comuna.models import Usuario, Post
 
 app = Flask(__name__)
 
