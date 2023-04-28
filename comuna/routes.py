@@ -1,3 +1,10 @@
+from flask import render_template, url_for, redirect, flash, request
+from comuna import app
+from comuna.forms import FormLogin, FormCriarConta
+
+
+lista_usuarios = ['Lira', 'João', 'Alon', 'Alessandra', 'Amanda']
+
 @app.route('/')
 def home():
     return render_template('home.html')
