@@ -1,0 +1,6 @@
+git add .
+git commit -m "texto"
+git merge main
+git push origin <branch>
+git checkout main
+git merge <branch>
