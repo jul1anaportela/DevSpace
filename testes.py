@@ -27,8 +27,13 @@ from models import Usuario, Post
 #     database.session.commit()
 
 #pesquisando posts
+# with app.app_context():
+#     post_teste = Post.query.first()
+#     print(post_teste.titulo)
+#     print(post_teste.autor.email)
+
+
+# ===== deletar o banco de dados e adicionar novamente pois esse foi apenas um teste
 with app.app_context():
-    post_teste = Post.query.first()
-    print(post_teste.titulo)
-    print(post_teste.autor.email)
-   
+    database.drop_all()
+    database.create_all()
