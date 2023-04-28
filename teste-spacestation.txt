@@ -1,5 +1,9 @@
 alteraçãozinhaaaa
 kjdalskdjlaksj
+<<<<<<< HEAD
 asdasdasasd
 asdasdasasdasdas
 ad
+=======
+asdasdas
+>>>>>>> main
