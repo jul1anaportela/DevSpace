@@ -2,7 +2,7 @@ from flask import render_template, redirect, url_for, flash, request
 from comuna import app, database, bcrypt
 from comuna.forms import FormLogin, FormCriarConta
 from comuna.models import Usuario
-from flask_login import login_user, logout_user
+from flask_login import login_user, logout_user, current_user
 
 
 lista_usuarios = ['juliana', 'ana', 'karina', 'isabella', 'maristela']
@@ -58,3 +58,4 @@ def perfil():
 @app.route('/post/criar')
 def criar_post():
     return render_template('criarpost.html')
+
