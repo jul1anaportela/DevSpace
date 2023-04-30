@@ -2,7 +2,7 @@ from flask import render_template, redirect, url_for, flash, request
 from comuna import app, database, bcrypt
 from comuna.forms import FormLogin, FormCriarConta
 from comuna.models import Usuario
-from flask_login import login_user, logout_user, current_user
+from flask_login import login_user, logout_user, current_user, login_required
 
 
 lista_usuarios = ['juliana', 'ana', 'karina', 'isabella', 'maristela']
@@ -19,6 +19,7 @@ def contato():
 
 
 @app.route('/usuarios')
+@login_required
 def usuarios():
     return render_template('usuarios.html', lista_usuarios=lista_usuarios)
 
@@ -46,16 +47,19 @@ def login():
 
 
 @app.route('/sair')
+@login_required
 def sair():
     logout_user()
     flash(f'Logout feito com sucesso', 'success')
     return redirect(url_for('home'))
 
 @app.route('/perfil')
+@login_required
 def perfil():
     return render_template('perfil.html')
 
 @app.route('/post/criar')
+@login_required
 def criar_post():
     return render_template('criarpost.html')
 
