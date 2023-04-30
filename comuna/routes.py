@@ -33,7 +33,11 @@ def login():
         if usuario and bcrypt.check_password_hash(usuario.senha, form_login.senha.data):
             login_user(usuario, remember=form_login.lembrar_dados.data)
             flash(f'Login feito com sucesso no e-mail: {form_login.email.data}', 'success')
-            return redirect(url_for('home'))
+            parametro_next = request.args.get('next')
+            if parametro_next:
+                return redirect(parametro_next)
+            else:
+                return redirect(url_for('home'))
         else:
             flash(f'Falha no login. E-mail ou Senha Incorretos', 'danger')
     if form_criarconta.validate_on_submit() and 'botao_submit_criarconta' in request.form:
