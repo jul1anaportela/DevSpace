@@ -16,8 +16,10 @@ from comuna.models import Usuario
 
 #pesquisando usuarios
 # with app.app_context():
-#     usuario = Usuario.query.filter_by(id="3").first()
-#     print(usuario.username)
+#     user = Usuario.query.all()
+#     print(user)    
+#     usuario = Usuario.query.filter_by(username="aline").first()
+#     print(usuario.senha)
     # usuario_teste = Usuario.query.filter_by(email='juliana@gmail.com').first()
     # print(usuario_teste)
     # print(usuario_teste.username)
