@@ -4,8 +4,34 @@
 {% block body %}
 
         <div class="container">
-            <h1>Meu 1º site ta no ar!!!!! To sabendo muito</h1><p>Esse site ta ficando legal</p>
-            <h2>Testando novo arquivo</h2>
+            <h1>Home</h1>
+            <hr>
+            {% for post in posts %}
+                <div class="row border p-3 meupost">
+                    <div class="col col-2">
+                        <div class="image pe-3">
+                            <img src="{{ url_for('static', filename='fotos_perfil/{}'.format(post.autor.foto_perfil)) }}" class="rounded-pill" width="50" > 
+                       </div> 
+                       <div class="col">
+                        <span class="number2">{{ post.autor.username}}</span> 
+                       </div>
+                       <div class="col">                                                    
+                            {% for pin in current_user.pin.split(';') %}
+                            <button type="button" class="btn btn-secondary disabled btn-sm" style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;">
+                                {{ pin }}
+                            </button>
+                            {% endfor %}  
+                        </div> 
+                    </div>
+
+                    
+
+                    <div class="col col-9">
+                        <h3>{{post.titulo}}</h3>
+                        <p>{{post.corpo}}</p>
+                    </div>
+                </div>
+            {% endfor %}
         </div>
 
 {% endblock %}

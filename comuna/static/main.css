@@ -10,8 +10,7 @@
 
 .stats{
 
-      background: #f2f5f8 !important;
-
+    background: #f2f5f8 !important;
     color: #000 !important;
 }
 .articles{
@@ -22,7 +21,7 @@
   font-weight:500;
 }
 .followers{
-    font-size:10px;
+  font-size:10px;
   color: #a1aab9;
 
 }
@@ -30,9 +29,13 @@
   font-weight:500;
 }
 .rating{
-    font-size:10px;
+  font-size:10px;
   color: #a1aab9;
 }
 .number3{
   font-weight:500;
+}
+
+.meupost{
+  background: #f2f5f8; 
 }
