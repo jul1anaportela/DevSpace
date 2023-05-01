@@ -1,7 +1,7 @@
 from flask import render_template, redirect, url_for, flash, request
 from comuna import app, database, bcrypt
-from comuna.forms import FormLogin, FormCriarConta, FormEditarPerfil
-from comuna.models import Usuario
+from comuna.forms import FormLogin, FormCriarConta, FormEditarPerfil, FormCriarPost
+from comuna.models import Usuario, Post
 from flask_login import login_user, logout_user, current_user, login_required
 import secrets
 import os
@@ -65,10 +65,17 @@ def perfil():
     foto_perfil = url_for('static', filename='fotos_perfil/{}'.format(current_user.foto_perfil))
     return render_template('perfil.html', foto_perfil=foto_perfil)
 
-@app.route('/post/criar')
+@app.route('/post/criar', methods=['GET', 'POST'])
 @login_required
 def criar_post():
-    return render_template('criarpost.html')
+    form = FormCriarPost()
+    if form.validate_on_submit():
+        post = Post(titulo=form.titulo.data, corpo=form.corpo.data, autor=current_user)
+        database.session.add(post)
+        database.session.commit()
+        flash('Eita como posta!', 'success')
+        return redirect(url_for('home'))
+    return render_template('criarpost.html', form=form)
 
 
 def salvar_imagem(imagem):
