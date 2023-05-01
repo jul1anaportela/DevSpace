@@ -11,7 +11,7 @@
 </p>
 
 <p align="center">
-  <img alt="projeto Comuna" src="./.github/preview.jpg" width="100%">up
+  <img alt="projeto Comuna" src="./.github/preview.jpg" width="100%">
 </p>
 
 ## 🚀 Tecnologias
@@ -19,6 +19,7 @@
 Esse projeto foi desenvolvido com as seguintes tecnologias:
 
 - HTML 
+- CSS
 - Bootstrap
 - Flask
 - Python
