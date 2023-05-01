@@ -15,13 +15,13 @@ from comuna.models import Usuario
 #      database.session.commit()
 
 #pesquisando usuarios
-# with app.app_context():
+with app.app_context():
 #     user = Usuario.query.all()
 #     print(user)    
 #     usuario = Usuario.query.filter_by(username="aline").first()
 #     print(usuario.senha)
-    # usuario_teste = Usuario.query.filter_by(email='juliana@gmail.com').first()
-    # print(usuario_teste)
+    usuario_teste = Usuario.query.filter_by(email='juteste@gmail.com').first()
+    print(usuario_teste.pin)
     # print(usuario_teste.username)
 
 #criando posts

@@ -87,6 +87,16 @@ def salvar_imagem(imagem):
     imagem_reduzida.save(caminho_completo)
     return nome_arquivo
 
+def atualizar_pin(form):
+    lista_pins = []
+    for campo in form:
+        if 'pin_' in campo.name:
+            if campo.data:
+                #adicionar o texto do campo.label na lista
+                lista_pins.append(campo.label.text)
+    return ';'.join(lista_pins)
+
+
 @app.route('/perfil/editar', methods=['GET', 'POST'])
 @login_required
 def editar_perfil():
@@ -97,6 +107,7 @@ def editar_perfil():
         if form_editarperfil.foto_perfil.data:
             nome_imagem = salvar_imagem(form_editarperfil.foto_perfil.data)
             current_user.foto_perfil = nome_imagem
+        current_user.pin  = atualizar_pin(form_editarperfil)
         database.session.commit()
         flash('Eita como atualiza!', 'success')
         return redirect(url_for('perfil'))

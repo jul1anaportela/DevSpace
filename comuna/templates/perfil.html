@@ -22,8 +22,13 @@
 
                 <div class="d-flex flex-column">
 
-                    <span class="articles">Posts</span>
-                    <span class="number1">38</span>
+                    <span class="articles">Pins</span>
+                    {% if 'Não Informado' in current_user.pin %}
+                        <span class="number1">0</span>
+                    {%else%}
+                        <span class="number1">{{ current_user.pin.count(';') + 1 }}</span>
+                    {%endif%}
+                    
                     
                 </div>
 
@@ -61,6 +66,17 @@
             
         </div>
         
+    </div>
+    <div class="row justify-content-center">
+        <div class="col col-4 text-center">
+            <strong>Pins</strong><br>
+            {% for pin in current_user.pin.split(';') %}
+            <button type="button" class="btn btn-primary disabled btn-sm" style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;">
+                {{ pin }}
+            </button>
+            {% endfor %}
+            
+        </div>
     </div>
 
 {% block form_editar_perfil %}   
