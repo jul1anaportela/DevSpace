@@ -6,8 +6,76 @@
         <div class="container">
             <h1>Usuários</h1>
             {% for usuario in lista_usuarios %}
-                <strong>{{ usuario }}</strong>
-                <hr>
+                
+                <div class="container mt-5 d-flex justify-content-center">
+            
+                    <div class="card p-3">
+            
+                        <div class="d-flex align-items-center">
+            
+                            <div class="image pe-3">
+                                <img src="{{ url_for('static', filename='fotos_perfil/{}'.format(usuario.foto_perfil)) }}" class="rounded-pill" width="200" >
+                            </div>
+            
+                        <div class="ml-3 w-100">
+                            
+                        <h4 class="mb-0 mt-0">{{ usuario.username }}</h4>
+                        <span>{{ usuario.email }}</span>
+            
+                        <div class="p-2 mt-2 bg-primary d-flex justify-content-between rounded text-white stats">
+            
+                            <div class="d-flex flex-column">
+            
+                                <span class="articles">Pins</span>
+                                {% if 'Não Informado' in usuario.pin %}
+                                    <span class="number1">0</span>
+                                {%else%}
+                                    <span class="number1">{{ usuario.pin.count(';') + 1 }}</span>
+                                {%endif%}
+                                
+                                
+                            </div>
+            
+                            <div class="d-flex flex-column">
+            
+                                <span class="followers">Followers</span>
+                                <span class="number2">980</span>
+                                
+                            </div>
+            
+            
+                            <div class="d-flex flex-column">
+            
+                                <span class="rating">Following</span>
+                                <span class="number3">1000</span>
+                                
+                            </div>
+
+                        </div>
+            
+            
+                        </div>
+            
+                            
+                        </div>
+                        
+                    </div>
+                    
+                </div>
+                <div class="row justify-content-center">
+                    <div class="col col-4 text-center">
+                        <strong>Pins</strong><br>
+                        {% for pin in usuario.pin.split(';') %}
+                        <button type="button" class="btn btn-primary disabled btn-sm" style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;">
+                            {{ pin }}
+                        </button>
+                        {% endfor %}
+                        
+                    </div>
+                </div>
+                
+
+
             {% endfor %}
         </div>
 
