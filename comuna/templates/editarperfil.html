@@ -5,10 +5,11 @@
     <hr>
     <div class="row">
         <div class="col d-flex justify-content-center">
-            <form method=POST action="" class="border p-5 rounded-3">
+            <form method=POST action="" class="border p-5 rounded-3" enctype="multipart/form-data">
                 {{form_editarperfil.csrf_token}}
                 <legend class="ms-3">Editar Perfil</legend>
                 <fieldset>
+                    
                     <div class="form-group mt-1"> <!--username-->
                         {{form_editarperfil.username.label (class="form-control-label ms-3")}}
 
@@ -39,7 +40,15 @@
                             {{form_editarperfil.email (class="form-control")}}
                         {%endif%}                            
                     </div>
-                    
+                    <div class="form-goup">
+                        {{form_editarperfil.foto_perfil.label}}
+                        {{form_editarperfil.foto_perfil(class="form-control-file")}}
+                        {% if form_editarperfil.foto_perfil.errors %}
+                            {% for erro in form_editarperfil.foto_perfil.errors %}
+                               <span class="text-danger">{{ erro }}</span><br>
+                            {% endfor %}
+                        {% endif %}
+                    </div>
                    
                 </fieldset><!--Botao Editar Perfil-->
                 {{form_editarperfil.botao_submit_editarperfil (class="btn btn-primary rounded-pill mt-2 ms-2")}}
