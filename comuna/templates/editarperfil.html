@@ -49,7 +49,17 @@
                             {% endfor %}
                         {% endif %}
                     </div>
-                   
+                    <hr>
+                    <span>Mais sobre você</span>
+                    {% for campo in form_editarperfil %}
+                        {% if 'pin_' in campo.name %}
+                            <div class="form-group mt-2"> <!--PINS-->
+                                {{campo (class="form-check-input")}}
+                                {{campo.label (class="form-check-label ms-3")}}                                
+                            </div>
+                        {% endif %}
+                    {% endfor %}
+                    
                 </fieldset><!--Botao Editar Perfil-->
                 {{form_editarperfil.botao_submit_editarperfil (class="btn btn-primary rounded-pill mt-2 ms-2")}}
             </form>

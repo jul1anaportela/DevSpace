@@ -30,6 +30,14 @@ class FormEditarPerfil(FlaskForm):
     username = StringField('Nome de Usuário', validators=[DataRequired()])
     email = StringField('E-mail', validators=[DataRequired(), Email()])
     foto_perfil = FileField('Atualizar Foto de Perfil', validators=[FileAllowed(['jpg', 'png', 'jpeg'])])
+    
+    pin_lgtv = BooleanField('LGTV')
+    pin_genz = BooleanField('GenZ')
+    pin_millenial = BooleanField('Millenial')
+    pin_kpoper = BooleanField('Kpoper')
+    pin_cacura = BooleanField('Cacura')
+    pin_tiktoker = BooleanField('Tiktoker')
+    
     botao_submit_editarperfil = SubmitField('Confirmar Edição')
 
     def validate_email(self, email):
