@@ -10,7 +10,7 @@
                 <div class="row border p-3 meupost">
                     <div class="col col-2">
                         <div class="image pe-3">
-                            <img src="{{ url_for('static', filename='fotos_perfil/{}'.format(post.autor.foto_perfil)) }}" class="rounded-pill" width="50" > 
+                            <img src="{{ url_for('static', filename='fotos_perfil/{}'.format(post.autor.foto_perfil)) }}" class="rounded-circle" width="50" > 
                        </div> 
                        <div class="col">
                         <span class="number2">{{ post.autor.username}}</span> 
@@ -27,9 +27,11 @@
                     
 
                     <div class="col col-9">
-                        <h3>{{post.titulo}}</h3>
-                        <p>{{post.corpo}}</p>
+                        <h3>{{ post.titulo }}</h3>
+                        <span class="number1">@{{ post.autor.username }}</span>   <span class="followers">- {{ post.data_criacao.strftime('%H:%M - %d de %B de %Y') }}</span> 
+                        <p>{{ post.corpo }}</p>
                     </div>
+                    
                 </div>
             {% endfor %}
         </div>
