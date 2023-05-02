@@ -16,7 +16,7 @@
                         <span class="number2">{{ post.autor.username}}</span> 
                        </div>
                        <div class="col">                                                    
-                            {% for pin in current_user.pin.split(';') %}
+                            {% for pin in post.autor.pin.split(';') %}
                             <button type="button" class="btn btn-secondary disabled btn-sm" style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;">
                                 {{ pin }}
                             </button>
