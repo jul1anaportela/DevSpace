@@ -35,7 +35,7 @@ class FormEditarPerfil(FlaskForm):
     pin_genz = BooleanField('GenZ')
     pin_millenial = BooleanField('Millenial')
     pin_kpoper = BooleanField('Kpoper')
-    pin_cacura = BooleanField('Cacura')
+    pin_cacura = BooleanField('Boomer')
     pin_tiktoker = BooleanField('Tiktoker')
     
     botao_submit_editarperfil = SubmitField('Confirmar Edição')
