@@ -1,4 +1,4 @@
-from flask import render_template, redirect, url_for, flash, request
+from flask import render_template, redirect, url_for, flash, request, abort
 from comuna import app, database, bcrypt
 from comuna.forms import FormLogin, FormCriarConta, FormEditarPerfil, FormCriarPost
 from comuna.models import Usuario, Post
@@ -125,7 +125,34 @@ def editar_perfil():
     return render_template('editarperfil.html', foto_perfil=foto_perfil, form=form)
 
 
-@app.route('/post/<post_id>')
+@app.route('/post/<post_id>', methods=['GET', 'POST'])
+@login_required
 def exibir_post(post_id):
     post = Post.query.get(post_id)
-    return render_template('post.html', post=post)
+    if current_user == post.autor:
+        form = FormCriarPost()
+        if request.method == 'GET': #pega as info da publicação e deixa escrito no forms
+            form.titulo.data = post.titulo
+            form.corpo.data = post.corpo
+        elif form.validate_on_submit():
+            post.titulo = form.titulo.data
+            post.corpo = form.corpo.data
+            database.session.commit()
+            flash('Eita como atualiza o post!', 'success')
+            return redirect(url_for('home'))
+    else:
+        form = None
+    return render_template('post.html', post=post, form=form)
+
+
+@app.route('/post/<post_id>/excluir', methods=['GET', 'POST'])
+@login_required
+def excluir_post(post_id):
+    post = Post.query.get(post_id)
+    if current_user == post.autor:
+        database.session.delete(post)
+        database.session.commit()
+        flash('Agora já era', 'danger')
+        return redirect(url_for('home'))
+    else:
+        abort(403)

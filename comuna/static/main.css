@@ -43,3 +43,19 @@
 .titulo{
   color: #1b1e23;
 }
+
+.excluir{
+  color: #c63637;
+}
+
+.editar{
+  color: #77dd77;
+}
+
+.excluir:hover{
+  color: #ed5d5d;
+}
+
+.editar:hover{
+  color: #03e203;
+}
