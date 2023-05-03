@@ -31,12 +31,12 @@ class FormEditarPerfil(FlaskForm):
     email = StringField('E-mail', validators=[DataRequired(), Email()])
     foto_perfil = FileField('Atualizar Foto de Perfil', validators=[FileAllowed(['jpg', 'png', 'jpeg'])])
     
-    pin_lgtv = BooleanField('LGTV')
-    pin_genz = BooleanField('GenZ')
-    pin_millenial = BooleanField('Millenial')
-    pin_kpoper = BooleanField('Kpoper')
-    pin_cacura = BooleanField('Boomer')
-    pin_tiktoker = BooleanField('Tiktoker')
+    pin_css = BooleanField('css')
+    pin_html = BooleanField('html')
+    pin_javascript = BooleanField('javascript')
+    pin_python = BooleanField('python')
+    pin_java = BooleanField('java')
+    pin_swift = BooleanField('swift')
     
     botao_submit_editarperfil = SubmitField('Confirmar Edição')
 

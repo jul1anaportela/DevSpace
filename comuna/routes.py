@@ -15,9 +15,14 @@ def home():
     return render_template('home.html', posts=posts)
 
 
-@app.route('/contato')
-def contato():
-    return render_template('contato.html')
+@app.route('/podcasts')
+def podcasts():
+    return render_template('podcasts.html')
+
+
+@app.route('/about')
+def about():
+    return render_template('about.html')
 
 
 @app.route('/usuarios')
