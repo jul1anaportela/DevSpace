@@ -1,0 +1,6 @@
+.border{
+    border: #a4abff 1px solid !important;
+    border-radius: 15px;
+    margin-bottom: 5px;
+    box-shadow: 2px 2px 4px #888888;
+}

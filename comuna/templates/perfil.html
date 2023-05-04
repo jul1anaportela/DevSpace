@@ -1,8 +1,6 @@
 {% extends 'base.html' %}
 
 {% block body %}
-    <h1 class="container">Meu Perfil</h1>
-    <hr>
     <div class="container mt-5 d-flex justify-content-center">        
         <div class="card p-3">
             <div class="d-flex align-items-center">
@@ -56,9 +54,9 @@
     </div>
     <div class="row justify-content-center">
         <div class="col col-4 text-center">
-            <strong>Pins</strong><br>
+            <strong>Skills</strong><br>
             {% for pin in current_user.pin.split(';') %}
-            <button type="button" class="btn btn-secondary disabled btn-sm" style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;">
+            <button type="button" class="btn btn-primary disabled btn-sm" style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;">
                 {{ pin }}
             </button>
             {% endfor %}            

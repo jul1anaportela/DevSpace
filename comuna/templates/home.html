@@ -16,7 +16,7 @@
                        </div>
                        <div class="col">                                                    
                             {% for pin in post.autor.pin.split(';') %}
-                            <button type="button" class="btn btn-secondary disabled btn-sm" style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;">
+                            <button type="button" class="btn btn-primary disabled btn-sm" style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;">
                                 {{ pin }}
                             </button>
                             {% endfor %}  
@@ -26,7 +26,7 @@
                     
 
                     <div class="col col-9">
-                        <a class="text-decoration-none titulo" href="{{ url_for('exibir_post', post_id=post.id) }}"><h3>{{ post.titulo }}</h3></a>
+                        <a class="text-decoration-none titulo" href="{{ url_for('exibir_post', post_id=post.id) }}"><h3 class="titulo">{{ post.titulo }}</h3></a>
                         <span class="number1">@{{ post.autor.username }}</span>   <span class="followers">- {{ post.data_criacao.strftime('%H:%M - %d de %B de %Y') }}</span> 
                         <p>{{ post.corpo }}</p>
                     </div>

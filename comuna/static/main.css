@@ -9,9 +9,8 @@ body{
 .card{
   width: 400px;
   border: none;
-  border-radius: 10px;
-   
-  background-color: #fbfbff;
+  border-radius: 10px;   
+  background-color:  #fbfbff;
 }
 
 
@@ -49,7 +48,7 @@ body{
 }
 
 .titulo{
-  color: #1b1e23;
+  color: #2e2e2e !important;
 }
 
 .excluir{
@@ -66,4 +65,32 @@ body{
 
 .editar:hover{
   color: #03e203;
+}
+
+
+.btn-primary{
+  background-color: #3b49df !important;
+  border: none !important;
+}
+
+.btn-outline-primary{
+  border-color: #3b49df !important;
+  color: #3b49df;
+}
+
+.btn-outline-primary:hover{
+  background-color: #3b49df !important;
+  color: white;
+}
+
+.footer{
+  position: fixed;
+  bottom: 0;
+  text-align: center;
+  font-size: 12px;
+  padding: 15px;
+  background-color: #7E87EA !important;
+  color: white !important;
+  font-weight: bold;
+  width: 100%;
 }

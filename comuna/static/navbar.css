@@ -2,7 +2,7 @@
     background-color: white !important;
     padding-top: 25px;
     padding-bottom: 25px;
-    box-shadow: 1px 2px 1px 0px rgba(0, 0, 0, 0.2);
+    box-shadow: 2px 2px 4px #888888;
 }
 
 .navbar-brand{
@@ -20,6 +20,7 @@
     border-radius: 15px;
     color: white !important;    
     background-color: #3b49df !important;
+    box-shadow: 2px 2px 4px #888888;
 
 }
 
@@ -27,4 +28,5 @@
     border: #3b49df 1px solid;
     border-radius: 15px;
     text-decoration: none !important;
+    box-shadow: 2px 2px 4px #888888;
 }
