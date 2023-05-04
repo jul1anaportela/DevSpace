@@ -1,7 +1,25 @@
 {% extends 'base.html' %}
 
 {% block body %}
-    <div class="container mt-5">
-        <h1>About</h1>
+    <div class="div-textos container mt-5 mb-5 ">
+        <h1 class="titulo-about">About DevSpace</h1>
+
+        <div class=" mt-5 mb-5">
+            <p class="texto-about mb-4">Bem-vindo ao DevSpace, um lugar criado especialmente para desenvolvedores! Aqui, você pode 
+                compartilhar suas experiências, conhecimentos e hobbies relacionados ao mundo da tecnologia. 
+                Queremos criar um espaço colaborativo e acolhedor para a comunidade de desenvolvedores, onde
+                todos possam trocar informações e ideias em um ambiente descontraído e amigável. Além disso, 
+                também oferecemos um espaço exclusivo para você acompanhar os podcasts de tecnologia mais populares
+                do momento.</p>
+            
+            <img class="image-about text-center" src="{{url_for('static', filename='about/about.jpg')}}" alt="">
+            
+            <p class="texto-about mt-5">Acreditamos que a tecnologia é uma ferramenta poderosa para criar soluções inovadoras e mudar o 
+                mundo. E, por isso, queremos incentivar o compartilhamento de conhecimentos e a colaboração entre 
+                os desenvolvedores.</p>
+            
+            <p class="texto-about mb-4">Venha fazer parte da nossa comunidade e compartilhar suas ideias e experiências conosco. Juntos, 
+                podemos construir um espaço incrível para os desenvolvedores!</p>
+        </div>
     </div>
 {% endblock %}
