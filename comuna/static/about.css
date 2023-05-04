@@ -1,0 +1,20 @@
+.texto-about{
+    text-align: justify;
+    font-size: 20px;
+}
+
+.titulo-about{
+    font-size: 50px;
+    color: #a4abff !important;
+}
+
+.image-about{
+    width: 50%;
+    height: 50%;
+    margin-left: 25% !important;
+    border-radius: 15px;
+}
+
+.div-textos{
+    margin-bottom: 100px !important;
+}
