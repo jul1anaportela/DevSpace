@@ -3,7 +3,7 @@ html{
 }
 
 body{
-  background-color: #f2f5f8;
+  background-color: #fbfbff;
 }
 
 .card{
@@ -11,7 +11,7 @@ body{
   border: none;
   border-radius: 10px;
    
-  background-color: #fff;
+  background-color: #fbfbff;
 }
 
 
@@ -45,7 +45,7 @@ body{
 }
 
 .meupost{
-  background: #f2f5f8; 
+  background: #fbfbff; 
 }
 
 .titulo{
