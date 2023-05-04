@@ -19,13 +19,13 @@
 .nav-link:hover{
     border-radius: 15px;
     color: white !important;    
-    background-color: #3b49df !important;
+    background-color: #7E87EA !important;
     box-shadow: 2px 2px 4px #888888;
 
 }
 
 .criar-post{
-    border: #3b49df 1px solid;
+    border: #7E87EA 1px solid;
     border-radius: 15px;
     text-decoration: none !important;
     box-shadow: 2px 2px 4px #888888;
