@@ -16,7 +16,7 @@
       <ul class="d-flex navbar-nav">
         {% if current_user.is_authenticated %}
           <li class="nav-item">
-            <a class="nav-link" href="{{ url_for('criar_post') }}">Create Post</a>
+            <a class="nav-link criar-post" href="{{ url_for('criar_post') }}">Create Post</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="{{ url_for('perfil') }}">{{current_user.username}}</a>

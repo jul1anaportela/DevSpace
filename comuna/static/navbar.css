@@ -13,8 +13,18 @@
 
 .nav-link{
     color: #3b49df !important;
+    border-radius: 15px;
 }
 
 .nav-link:hover{
-    text-decoration: underline !important;
+    border-radius: 15px;
+    color: white !important;    
+    background-color: #3b49df !important;
+
+}
+
+.criar-post{
+    border: #3b49df 1px solid;
+    border-radius: 15px;
+    text-decoration: none !important;
 }
