@@ -63,10 +63,8 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 
 ## 🔖 Desafios
 
-<p>texto
-texto
-texto
-texto
-texot
-esdt
+<p>
+Apesar de ser o meu primeiro projeto com Flask, ele teve alguns desafios. Tive que implementar autenticação de usuários, criação de usuários, criação de posts, exclusão de posts, teve também páginas mais simples que apenas exibia conteúdos como a página de podcasts e a página about.
 </p>
+
+<p>A home por sua vez pega os posts de todos os usuários e exibe. Então nesse projeto eu também trabalhei com banco de dados utilizando apenas o Flask. Para um primeiro projeto eu estou muito satisfeita pois o meu prorósito era aprender mais a parte do backend e não me preocupei tanto com o layout, mas futuramente quero implementar mais funcionalidades e aprimorar mais esse projeto.</p>
