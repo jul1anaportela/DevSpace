@@ -32,3 +32,4 @@ else:
     print("Base de dados já existente")
 
 from comuna import routes
+
