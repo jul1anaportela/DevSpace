@@ -61,4 +61,12 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
   <img alt="Página Podcasts" src="./img-projeto/about.png">
 </p>
 
-## Desafios
+## 🔖 Desafios
+
+<p>texto
+texto
+texto
+texto
+texot
+esdt
+</p>
