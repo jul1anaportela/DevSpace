@@ -1,0 +1,69 @@
+{% extends 'base.html' %}
+
+{% block body %}
+    <div class="container mt-5 d-flex justify-content-center">        
+        <div class="card p-3">
+            <div class="d-flex align-items-center">
+                <div class="image pe-3">
+                     <img src="{{ foto_perfil }}" class="rounded-circle" width="200" >
+                </div>
+            <div class="ml-3 w-100">                
+            <h4 class="mb-0 mt-0">{{ current_user.username }}</h4>
+            <span>{{ current_user.email }}</span>
+            <div class="p-2 mt-2 bg-primary d-flex justify-content-between rounded text-white stats">
+                <!-- <div class="d-flex flex-column">
+                    <span class="articles">Pins</span>
+                    {% if 'Não Informado' in current_user.pin %}
+                        <span class="number1">0</span>
+                    {%else%}
+                        <span class="number1">{{ current_user.pin.count(';') + 1 }}</span>
+                    {%endif%}                   
+                </div> -->
+                <div class="d-flex flex-column">
+                    <span class="followers">Posts</span>
+                    <span class="number2">{{ current_user.contar_posts() }}</span>                    
+                </div>
+
+                <div class="d-flex flex-column">
+                    <span class="followers">Followers</span>
+                    <span class="number2">980</span>                    
+                </div>
+                <div class="d-flex flex-column">
+                    <span class="rating">Following</span>
+                    <span class="number3">1000</span>                 
+                </div>                
+            </div>
+
+
+            <div class="button mt-2 d-flex flex-row align-items-center">
+
+               <a href="{{url_for('editar_perfil')}}">
+                <button class="btn btn-sm btn-outline-primary w-100 rounded-pill">Editar Perfil</button>
+               </a>
+                
+            </div>
+
+
+            </div>
+
+                
+            </div>
+            
+        </div>
+        
+    </div>
+    <div class="row justify-content-center">
+        <div class="col col-4 text-center">
+            <strong>Skills</strong><br>
+            {% for pin in current_user.pin.split(';') %}
+            <button type="button" class="btn btn-primary disabled btn-sm" style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;">
+                {{ pin }}
+            </button>
+            {% endfor %}            
+        </div>
+    </div>
+    
+
+{% block form_editar_perfil %}   
+{% endblock %}
+{% endblock %}

@@ -1,0 +1,96 @@
+html{
+  font-family: 'Ubuntu', sans-serif;
+}
+
+body{
+  background-color: #fbfbff;
+}
+
+.card{
+  width: 400px;
+  border: none;
+  border-radius: 10px;   
+  background-color:  #fbfbff;
+}
+
+
+
+.stats{
+
+    background: #f2f5f8 !important;
+    color: #000 !important;
+}
+.articles{
+  font-size:10px;
+  color: #a1aab9;
+}
+.number1{
+  font-weight:500;
+}
+.followers{
+  font-size:10px;
+  color: #a1aab9;
+
+}
+.number2{
+  font-weight:500;
+}
+.rating{
+  font-size:10px;
+  color: #a1aab9;
+}
+.number3{
+  font-weight:500;
+}
+
+.meupost{
+  background: #fbfbff; 
+}
+
+.titulo{
+  color: #2e2e2e !important;
+}
+
+.excluir{
+  color: #c63637;
+}
+
+.editar{
+  color: #77dd77;
+}
+
+.excluir:hover{
+  color: #ed5d5d;
+}
+
+.editar:hover{
+  color: #03e203;
+}
+
+
+.btn-primary{
+  background-color: #3b49df !important;
+  border: none !important;
+}
+
+.btn-outline-primary{
+  border-color: #3b49df !important;
+  color: #3b49df;
+}
+
+.btn-outline-primary:hover{
+  background-color: #3b49df !important;
+  color: white;
+}
+
+.footer{
+  position: fixed;
+  bottom: 0;
+  text-align: center;
+  font-size: 12px;
+  padding: 15px;
+  background-color: #7E87EA !important;
+  color: white !important;
+  font-weight: bold;
+  width: 100%;
+}

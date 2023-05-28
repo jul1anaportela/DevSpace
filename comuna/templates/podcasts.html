@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+
+{% block body %}
+    <div class="container mt-5 mb-5">
+        <div class="row row-cols-1 row-cols-md-2 g-4">
+            <div class="col">
+              <div class="card">
+                <a href="https://open.spotify.com/show/7gNryNpuHuhZTwfbCdiOqL" target="_blank"><img src="{{ url_for('static', filename='podcasts/devs-cansados.jpg') }}" class="card-img-top" alt="logo do podcast devs cansados, clicando em cima leva para o podcast deles."></a>
+                <div class="card-body">
+                  <h5 class="card-title">Devs Cansados</h5>
+                  <p class="card-text">Está cansado dos problemas de programação e desenvolvimento no seu dia a dia? Então junte-se a nós.</p>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card">
+                <a href="https://www.hipsters.tech/" target="_blank"><img src="{{ url_for('static', filename='podcasts/Hipsters-Talks.jpg') }}" class="card-img-top" alt="logo do podcast hipsters ponto talks e clicando em cima, leva você para a página do podcast"></a>
+                <div class="card-body">
+                  <h5 class="card-title">Hipsters Ponto Tech</h5>
+                  <p class="card-text">O Hipsters Ponto Tech é o podcast onde o pessoal da Caelum e da Alura entra em discussões acaloradas sobre programação, design, ux, gadgets, startups e as últimas modinhas em tecnologia</p>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card">
+                <a href="https://podprogramar.com.br/category/podcast/" target="_blank"><img src="{{ url_for('static', filename='podcasts/podprogramar.jpg') }}" class="card-img-top" alt="logo do podcast podprogramar e clicando em cima, leva você para a página do podcast"></a>
+                <div class="card-body">
+                  <h5 class="card-title">PodProgramar</h5>
+                  <p class="card-text">O PodProgramar é um podcast apresentado por Jessi Zanelato e Ana Eliza, desenvolvedoras, focado em programação, notícias e histórias da área, tudo com o toque feminino numa área dominada por homens.
+
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card">
+                <a href="https://mulheresdeproduto.com/podcast" target="_blank"><img src="{{ url_for('static', filename='podcasts/mulheres-de-produto.jpg') }}" class="card-img-top" alt="logo do podcast mulheres de produto e clicando em cima você será levado para a página do podcast"></a>
+                <div class="card-body">
+                  <h5 class="card-title">Mulheres de Produto</h5>
+                  <p class="card-text">O podcast Mulheres de Produto é uma extensão da comunidade de mesmo nome (com 8.300 mulheres na plataforma do Slack), que traz à tona debates que buscam reduzir as desigualdades no mercado de trabalho em tecnologia.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+    </div>
+{% endblock %}

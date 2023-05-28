@@ -1,0 +1,32 @@
+.navbar-expand-lg{
+    background-color: white !important;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    box-shadow: 2px 2px 4px #888888;
+}
+
+.navbar-brand{
+    font-weight: bolder;
+    font-size: 2rem;
+    color: #3b49df !important;
+}
+
+.nav-link{
+    color: #3b49df !important;
+    border-radius: 15px;
+}
+
+.nav-link:hover{
+    border-radius: 15px;
+    color: white !important;    
+    background-color: #7E87EA !important;
+    box-shadow: 2px 2px 4px #888888;
+
+}
+
+.criar-post{
+    border: #7E87EA 1px solid;
+    border-radius: 15px;
+    text-decoration: none !important;
+    box-shadow: 2px 2px 4px #888888;
+}
