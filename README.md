@@ -9,6 +9,7 @@
   <a href="#-projeto">Projeto</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#-layout">Layout</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#-desafios">Desafios</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#-deploy">Deploy</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
 </p>
 
 ## Home
@@ -68,3 +69,7 @@ Apesar de ser o meu primeiro projeto com Flask, ele teve alguns desafios. Tive q
 </p>
 
 <p>A home por sua vez pega os posts de todos os usuários e exibe. Então nesse projeto eu também trabalhei com banco de dados utilizando apenas o Flask. Para um primeiro projeto eu estou muito satisfeita pois o meu prorósito era aprender mais a parte do backend e não me preocupei tanto com o layout, mas futuramente quero implementar mais funcionalidades e aprimorar mais esse projeto.</p>
+
+## 🌍 Deploy
+
+O projeto está disponível nesse link 🔗 [link](devspace-production-70f4.up.railway.app)
