@@ -73,4 +73,4 @@ Apesar de ser o meu primeiro projeto com Flask, ele teve alguns desafios. Tive q
 ## 🌍 Deploy
 
 [O projeto está disponível através desse link🔗](https://devspace-production-70f4.up.railway.app/)
-<a hre="https://devspace-production-70f4.up.railway.app/" target="_blank">O projeto está disponível através desse link🔗</a>
+<a href="https://devspace-production-70f4.up.railway.app/" target="_blank">O projeto está disponível através desse link🔗</a>
