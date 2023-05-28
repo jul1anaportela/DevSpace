@@ -1,8 +1,0 @@
-git add .
-git commit -m "texto"
-git merge main
-git push origin <branch>
-git checkout main
-git merge <branch>
-git commit -m "modificações da branch"
-git push origin main
