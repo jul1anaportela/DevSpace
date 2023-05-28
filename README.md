@@ -72,4 +72,4 @@ Apesar de ser o meu primeiro projeto com Flask, ele teve alguns desafios. Tive q
 
 ## 🌍 Deploy
 
-<a href="devspace-production-70f4.up.railway.app">O projeto está disponível através desse link 🔗<\a> 
+[O projeto está disponível através desse link🔗](https://devspace-production-70f4.up.railway.app/)
